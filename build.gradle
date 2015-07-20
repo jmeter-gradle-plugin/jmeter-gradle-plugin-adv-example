@@ -9,13 +9,13 @@ buildscript {
     }
     repositories {
         mavenCentral()
-		maven {
-            url 'https://dl.bintray.com/jmeter-gradle-plugin/jmeter'
-        }
+		mavenLocal()
+//		maven {
+//            url 'https://dl.bintray.com/jmeter-gradle-plugin/jmeter'
+//        }
     }
     dependencies {
-        //classpath "com.github.kulya:jmeter-gradle-plugin:1.3.4-2.13"
-		classpath "net.foragerr.jmeter:jmeter-gradle-plugin:0.1.6-2.13"
+		classpath "net.foragerr.jmeter:jmeter-gradle-plugin:0.5.0-2.13"
         classpath "org.codehaus.groovy:groovy-all:2.4.3"
         classpath "com.opencsv:opencsv:3.3"
         classpath "com.google.guava:guava:18.0"
@@ -30,20 +30,15 @@ buildscript {
     configurations.classpath.exclude group: 'commons-pool2', module: 'commons-pool2'
 }
 
-jmeterRun.configure {
-    jmeterTestFiles = [file("src/test/jmeter/test2.jmx")]
-    jmeterUserPropertiesFiles = [file("src/test/jmeter/user.properties")]
+jmeter {
+    jmTestFiles = [file("src/test/jmeter/test2.jmx")]
+    jmUserPropertiesFiles = [file("src/test/jmeter/user.properties")]
     enableReports = true
-	enableExtendedReports = true
-    jmeterIgnoreFailure = false
-    jmeterIgnoreError = false
-}
-
-jmeterEditor.configure {
-    maxHeapSize = "1200M"
-    jmeterPluginJars = ["groovy","guava","opencsv","jmeter-plugins-standard","commons-lang3",
-        "jmeter-plugins-common","jmeter-plugins-extras","jmeter-plugins-extras-libs",
-        "jmeter-plugins-webdriver"]
+	
+	maxHeapSize = "1200M"
+	jmPluginJars = ["groovy","guava","opencsv","jmeter-plugins-standard","commons-lang3",
+		"jmeter-plugins-common","jmeter-plugins-extras","jmeter-plugins-extras-libs",
+		"jmeter-plugins-webdriver"]
 }
 
 task printBuildScriptClasspath << {
