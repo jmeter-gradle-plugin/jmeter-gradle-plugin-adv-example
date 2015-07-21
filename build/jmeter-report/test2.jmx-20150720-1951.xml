@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1353" lt="290" s="true" lb="HTTP Request - clickability.com" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="37640" ng="1" na="1">
+  <httpSample t="290" lt="290" s="true" lb="http://clickability.com/" rc="301" rm="Moved Permanently" tn="Thread Group 1-1" dt="text" by="386" ng="1" na="1"/>
+  <httpSample t="1058" lt="980" s="true" lb="http://www.clickability.com/" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="37254" ng="1" na="1"/>
+</httpSample>
+<httpSample t="1009" lt="768" s="true" lb="HTTP Request - http://www.aboutcookies.org/DEFAULT.ASPX?page=1" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="22654" ng="1" na="1"/>
+<httpSample t="579" lt="155" s="false" lb="HTTP Request - doubleclick.net" rc="Non HTTP response code: javax.net.ssl.SSLHandshakeException" rm="Non HTTP response message: Remote host closed connection during handshake" tn="Thread Group 1-1" dt="text" by="4340" ng="1" na="1">
+  <httpSample t="155" lt="155" s="true" lb="http://doubleclick.net/" rc="301" rm="Moved Permanently" tn="Thread Group 1-1" dt="text" by="360" ng="1" na="1"/>
+  <httpSample t="67" lt="67" s="true" lb="http://www.google.com/doubleclick" rc="301" rm="Moved Permanently" tn="Thread Group 1-1" dt="text" by="602" ng="1" na="1"/>
+  <httpSample t="24" lt="24" s="true" lb="http://www.google.com/doubleclick/" rc="301" rm="Moved Permanently" tn="Thread Group 1-1" dt="text" by="617" ng="1" na="1"/>
+  <httpSample t="327" lt="0" s="false" lb="https://www.doubleclickbygoogle.com/" rc="Non HTTP response code: javax.net.ssl.SSLHandshakeException" rm="Non HTTP response message: Remote host closed connection during handshake" tn="Thread Group 1-1" dt="text" by="2761" ng="1" na="1"/>
+</httpSample>
+<sample t="1" lt="0" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="2087" ng="1" na="1"/>
+
+</testResults>

@@ -8,7 +8,7 @@ NOTES: These instructions are a mix of Windows and Linux instructions, and so yo
 
 As a user, all you need to do is use the 'gradlew' launcher to execute jmeterEditor task like so:
 
-    gradlew jmeterEditor --info
+    gradlew jmGui --info
 
 Or, you can skip those steps and use the included script ```startJmeterWithGradle.bat```.
 

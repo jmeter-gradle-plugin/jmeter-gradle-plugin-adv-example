@@ -1,5 +1,3 @@
-// https://github.com/kulya/jmeter-gradle-plugin
-//apply plugin: 'jmeter'
 apply plugin: 'net.foragerr.jmeter'
 apply plugin: 'java'
 
@@ -39,6 +37,10 @@ jmeter {
 	jmPluginJars = ["groovy","guava","opencsv","jmeter-plugins-standard","commons-lang3",
 		"jmeter-plugins-common","jmeter-plugins-extras","jmeter-plugins-extras-libs",
 		"jmeter-plugins-webdriver"]
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.5'
 }
 
 task printBuildScriptClasspath << {
