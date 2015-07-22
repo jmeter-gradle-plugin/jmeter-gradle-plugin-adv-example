@@ -10,7 +10,7 @@ IF NOT EXIST gradle\wrapper\gradle-wrapper.jar (
   CALL gradle wrapper
 )
 
-CALL .\gradlew.bat clean printBuildScriptClasspath assemble jmRun --info %1 %2 %3
+CALL .\gradlew.bat clean printBuildScriptClasspath assemble jmRun --stacktrace %1 %2 %3
 
 GOTO :END
 :ERROR
@@ -18,5 +18,5 @@ ECHO.
 ECHO There was a configuration error in this script!
 :END
 ECHO.
-ECHO Closing in 10 seconds...
-FOR /l %%a IN (10,-1,1) DO (TITLE %WINDOW_TITLE% -- Closing in %%as&PING.exe -n 2 -w 1 127.0.0.1>nul)
+ECHO Closing in 30 seconds...
+FOR /l %%a IN (30,-1,1) DO (TITLE %WINDOW_TITLE% -- Closing in %%as&PING.exe -n 2 -w 1 127.0.0.1>nul)
