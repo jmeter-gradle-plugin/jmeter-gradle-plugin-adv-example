@@ -13,7 +13,7 @@ buildscript {
 //        }
     }
     dependencies {
-		classpath "net.foragerr.jmeter:jmeter-gradle-plugin:0.5.0-2.13"
+		classpath "net.foragerr.jmeter:jmeter-gradle-plugin:0.5.4-2.13"
         classpath "org.codehaus.groovy:groovy-all:2.4.3"
         classpath "com.opencsv:opencsv:3.3"
         classpath "com.google.guava:guava:18.0"
@@ -32,9 +32,10 @@ jmeter {
     jmTestFiles = [file("src/test/jmeter/test2.jmx")]
     jmUserPropertiesFiles = [file("src/test/jmeter/user.properties")]
     enableReports = true
-	
+	//ignoreErrors = false
+	//ignoreFailures = false
 	maxHeapSize = "1200M"
-	jmPluginJars = ["groovy","guava","opencsv","jmeter-plugins-standard","commons-lang3",
+	jmPluginJars = ["groovy-all","guava","opencsv","jmeter-plugins-standard","commons-lang3",
 		"jmeter-plugins-common","jmeter-plugins-extras","jmeter-plugins-extras-libs",
 		"jmeter-plugins-webdriver"]
 }

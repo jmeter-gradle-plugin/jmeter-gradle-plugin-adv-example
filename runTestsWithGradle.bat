@@ -15,7 +15,7 @@ CALL .\gradlew.bat clean printBuildScriptClasspath assemble jmRun --info %1 %2 %
 GOTO :END
 :ERROR
 ECHO.
-ECHO There was an error!
+ECHO There was a configuration error in this script!
 :END
 ECHO.
 ECHO Closing in 10 seconds...
