@@ -7,10 +7,10 @@ buildscript {
     }
     repositories {
         mavenCentral()
-		mavenLocal()
-//		maven {
-//            url 'https://dl.bintray.com/jmeter-gradle-plugin/jmeter'
-//        }
+		    //mavenLocal()  // local enabled only when compiling jmeter-gradle-plugin to local maven repo
+        maven {
+          url 'https://dl.bintray.com/jmeter-gradle-plugin/jmeter'
+        }
     }
     dependencies {
 		classpath "net.foragerr.jmeter:jmeter-gradle-plugin:latest.release"
@@ -32,12 +32,12 @@ jmeter {
     jmTestFiles = [file("src/test/jmeter/test2.jmx")]
     jmUserPropertiesFiles = [file("src/test/jmeter/user.properties")]
     enableReports = true
-	//ignoreErrors = false
-	//ignoreFailures = false
-	maxHeapSize = "1200M"
-	jmPluginJars = ["groovy-all","guava","opencsv","jmeter-plugins-standard","commons-lang3",
-		"jmeter-plugins-common","jmeter-plugins-extras","jmeter-plugins-extras-libs",
-		"jmeter-plugins-webdriver"]
+	  //ignoreErrors = false
+	  //ignoreFailures = false
+	  maxHeapSize = "1200M"
+	  jmPluginJars = ["groovy-all","guava","opencsv","jmeter-plugins-standard","commons-lang3",
+		  "jmeter-plugins-common","jmeter-plugins-extras","jmeter-plugins-extras-libs",
+		  "jmeter-plugins-webdriver"]
 }
 
 task wrapper(type: Wrapper) {

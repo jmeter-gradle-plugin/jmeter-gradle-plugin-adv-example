@@ -10,7 +10,7 @@ IF NOT EXIST gradle\wrapper\gradle-wrapper.jar (
   CALL gradle wrapper
 )
 
-CALL .\gradlew.bat clean printBuildScriptClasspath assemble jmRun --stacktrace %1 %2 %3
+CALL .\gradlew.bat clean printBuildScriptClasspath assemble jmRun jmReport --stacktrace %1 %2 %3
 
 GOTO :END
 :ERROR
