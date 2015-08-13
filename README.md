@@ -20,3 +20,7 @@ Also included, is *SauceLabs-Example.jmx*, an example of running Chrome browser 
 
 ## Notes
 
+To use snapshot, use this repo:
+url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+and thid dependency:
+classpath "net.foragerr.jmeter:jmeter-gradle-plugin:+"

@@ -5,7 +5,7 @@ ECHO Closing this window will close Jmeter...
 IF NOT DEFINED JAVA_HOME ECHO You need to define JAVA_HOME on your system.
 
 IF NOT EXIST gradle\wrapper\gradle-wrapper.jar (
-  IF NOT DEFINED GRADLE_HOME1 ECHO You must define GRADLE_HOME on your system and add %%GRADLE_HOME%%\bin to your PATH.&&GOTO :ERROR
+  IF NOT DEFINED GRADLE_HOME ECHO You must define GRADLE_HOME on your system and add %%GRADLE_HOME%%\bin to your PATH.&&GOTO :ERROR
   :: installs gradle wrapper if you have another Gradle distro local on your machine
   CALL gradle wrapper
 )
