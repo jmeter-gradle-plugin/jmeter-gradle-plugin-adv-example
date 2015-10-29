@@ -3,7 +3,7 @@ apply plugin: 'java'
 
 buildscript {
     ext {
-        pluginsVersion = "1.3.0"
+        pluginsVersion = "1.3.1"
     }
     repositories {
         mavenCentral()
@@ -31,8 +31,8 @@ buildscript {
 jmeter {
     //jmTestFiles = [file("src/test/jmeter/test2.jmx")]
     jmUserPropertiesFiles = [file("src/test/jmeter/user.properties")]
-    enableReports = false
-	//enableExtendedReports = false
+    enableReports = true
+	enableExtendedReports = true
 	//ignoreErrors = false
 	//ignoreFailures = false
 	maxHeapSize = "1200M"
