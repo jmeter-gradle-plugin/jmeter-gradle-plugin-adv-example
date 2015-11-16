@@ -7,13 +7,13 @@ buildscript {
     }
     repositories {
         mavenCentral()
-		//mavenLocal()  // local enabled only when compiling jmeter-gradle-plugin to local maven repo
+		mavenLocal()  // local enabled only when compiling jmeter-gradle-plugin to local maven repo
         maven {
           url 'https://dl.bintray.com/jmeter-gradle-plugin/jmeter'
         }
     }
     dependencies {
-		classpath "net.foragerr.jmeter:jmeter-gradle-plugin:latest.release"
+		classpath "net.foragerr.jmeter:jmeter-gradle-plugin:1.0.2-2.13-SNAPSHOT"
         classpath "org.codehaus.groovy:groovy-all:2.4.3"
         classpath "com.opencsv:opencsv:3.3"
         classpath "com.google.guava:guava:18.0"
@@ -30,7 +30,7 @@ buildscript {
 
 jmeter {
     //jmTestFiles = [file("src/test/jmeter/test2.jmx")]
-    jmUserPropertiesFiles = [file("src/test/jmeter/user.properties")]
+    //jmUserPropertiesFiles = [file("src/test/jmeter/user.properties")]
     enableReports = true
 	enableExtendedReports = true
 	//ignoreErrors = false
